@@ -1,9 +1,16 @@
 [
     {
-        "id": "1d2d3",
+        "num": 1,
+        "id": "1a2a3b",
         "name": "BLEIDY CALDERÓN",
-        "number": "1",
-        "guests": "My React app",
-        "main": "src/index.js"
+        "numberOfGuests": 1,
+        "guests": ["BLEIDY SHIRLEY CALDERÓN GARCÍA"]
+    },
+    {
+        "num": 2,
+        "id": "aqde45",
+        "name": "KEILA CALDERÓN Y JAIVER BUITRAGO",
+        "numberOfGuests": 2,
+        "guests": ["KEILA LILIANA CALDERÓN GARCÍA","JAIVER BUITRAGO"]
     }
 ]
