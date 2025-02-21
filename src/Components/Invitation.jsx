@@ -1,7 +1,7 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import data from '../data/invitations.json';
-import SpotifyPlayer from './SpotifyPlayer';
+import MusicPlayer from './SpotifyPlayer';
 import Countdown from './counter.jsx';
 import song from '../assets/audio/song.mp3'
 
@@ -33,7 +33,7 @@ export const Invitation = () => {
       {guest && (
         <>
           <div className='bg-blue-100 min-h-screen' style={{backgroundImage: `url("../assets/img/photo1.jpg")`}}>
-            <SpotifyPlayer audioSrc={song}/>
+            <MusicPlayer audioSrc={song}/>
             <Countdown></Countdown>
           </div>
           <h1>Invitación para {guest.name}</h1>
