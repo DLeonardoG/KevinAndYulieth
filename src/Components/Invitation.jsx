@@ -31,9 +31,10 @@ export const Invitation = () => {
     <div>
       {guest && (
         <>
+          <div className='bg-blue-100 min-h-screen' style={{backgroundImage: `url("../assets/img/photo1.jpg")`}}>
+            <SpotifyPlayer audioSrc={song}/>
+          </div>
           <h1>Invitación para {guest.name}</h1>
-          {/* Más detalles del invitado */}
-          <SpotifyPlayer audioSrc={song}/>
         </>
       )}
     </div>
