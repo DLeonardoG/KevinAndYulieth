@@ -2,10 +2,11 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import data from '../data/invitations.json';
 import SpotifyPlayer from './SpotifyPlayer';
+import song from '../assets/audio/song.mp3'
 
 
 export const Invitation = () => {
-  const { id } = useParams(); // Obtiene el id de la URL
+  const { id } = useParams();
   const navigate = useNavigate();
   const [guest, setGuest] = useState(null);
   const [error, setError] = useState('');
@@ -32,7 +33,7 @@ export const Invitation = () => {
         <>
           <h1>Invitación para {guest.name}</h1>
           {/* Más detalles del invitado */}
-          <SpotifyPlayer/>
+          <SpotifyPlayer audioSrc={song}/>
         </>
       )}
     </div>
