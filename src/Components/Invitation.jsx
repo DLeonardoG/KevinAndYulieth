@@ -5,6 +5,7 @@ import MusicPlayer from './SpotifyPlayer';
 import Countdown from './counter.jsx';
 import song from '../assets/audio/song.mp3'
 import photo1 from '../assets/img/photo1.jpg'
+import background1 from '../assets/img/background1.svg'
 
 
 export const Invitation = () => {
@@ -33,8 +34,18 @@ export const Invitation = () => {
     <div>
       {guest && (
         <>
-          <div className='bg-blue-100 min-h-screen' style={{backgroundImage: `url("../assets/img/photo1.jpg")`}}>
             <MusicPlayer audioSrc={song} backgroundImage={photo1}/>
+            <div 
+  className='bg-black h-screen' 
+  style={{ 
+    backgroundImage: `url(${background1})`, 
+    backgroundSize: 'cover', 
+    backgroundPosition: 'center' 
+  }}
+>
+</div>
+
+          <div className='bg-blue-100 min-h-screen'>
             <Countdown></Countdown>
           </div>
           <h1>Invitación para {guest.name}</h1>
