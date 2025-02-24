@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import data from "../data/invitations.json";
 import MusicPlayer from "./SpotifyPlayer";
 import Countdown from "./counter.jsx";
+import Description from "./description.jsx";
 import song from "../assets/audio/song.mp3";
 import photo1 from "../assets/img/photo1.jpg";
 import background1 from "../assets/img/background1.svg";
@@ -42,10 +43,7 @@ export const Invitation = () => {
               backgroundPosition: "center",
             }}
           ></div>
-
-          <div className="bg-blue-100 min-h-screen">
-            <Countdown></Countdown>
-          </div>
+          <Description />
           <h1>Invitación para {guest.name}</h1>
         </>
       )}
