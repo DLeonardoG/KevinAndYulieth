@@ -1,16 +1,10 @@
 import { useState, useRef, useEffect } from "react";
 
-const MusicPlayer = ({
-  audioSrc,
-  backgroundImage,
-  onNext,
-  hasNext,
-}) => {
+const MusicPlayer = ({ audioSrc, backgroundImage }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const [volume, setVolume] = useState(1);
-  const [repeatMode, setRepeatMode] = useState("none");
   const audioRef = useRef(null);
   const progressBarRef = useRef(null);
 
@@ -19,16 +13,15 @@ const MusicPlayer = ({
 
     const updateMetaData = () => {
       setDuration(audio.duration);
-      if (isPlaying) audio.play();
+      audio.play().catch(() => {}); // Intenta autoplay al cargar
+      setIsPlaying(true);
     };
 
     const updateTime = () => setCurrentTime(audio.currentTime);
 
     const handleEnd = () => {
-      if (repeatMode === "track") {
-        audio.currentTime = 0;
-        audio.play();
-      } else if (onNext && hasNext) onNext();
+      audio.currentTime = 0;
+      audio.play();
     };
 
     audio.addEventListener("loadedmetadata", updateMetaData);
@@ -40,7 +33,7 @@ const MusicPlayer = ({
       audio.removeEventListener("timeupdate", updateTime);
       audio.removeEventListener("ended", handleEnd);
     };
-  }, [repeatMode, hasNext, isPlaying, onNext]);
+  }, []);
 
   const togglePlayPause = () => {
     setIsPlaying(!isPlaying);
@@ -60,9 +53,10 @@ const MusicPlayer = ({
       .padStart(2, "0");
     return `${minutes}:${seconds}`;
   };
+
   return (
     <div className="music-player">
-      <audio ref={audioRef} src={audioSrc} />
+      <audio ref={audioRef} src={audioSrc} loop />
       <div
         className="background-image"
         style={{ backgroundImage: `url(${backgroundImage})` }}
@@ -175,11 +169,6 @@ const MusicPlayer = ({
           backdrop-filter: blur(10px);
           border: 1px solid rgba(255, 255, 255, 0.1);
         }
-        .track-info {
-          text-align: center;
-          padding: 0 1rem;
-          margin-bottom: 2rem;
-        }
         .progress-container {
           height: 4px;
           background: rgba(255, 255, 255, 0.1);
@@ -207,30 +196,6 @@ const MusicPlayer = ({
           align-items: center;
           margin-top: 1.5rem;
         }
-        .main-controls {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-        }
-        .control-btn {
-          background: none;
-          border: none;
-          color: #b3b3b3;
-          padding: 10px;
-          cursor: pointer;
-          transition: all 0.2s ease;
-        }
-        .control-btn:hover:not(:disabled) {
-          color: #fff;
-          transform: scale(1.1);
-        }
-        .control-btn:disabled {
-          opacity: 0.5;
-          cursor: not-allowed;
-        }
-        .control-btn.active {
-          color: transparent;
-        }
         .play-pause-btn {
           background: transparent;
           border: none;
@@ -244,7 +209,6 @@ const MusicPlayer = ({
           cursor: pointer;
           transition: transform 0.2s ease;
         }
-
         .play-pause-btn:hover {
           transform: scale(1.05);
           background: transparent;
@@ -273,13 +237,11 @@ const MusicPlayer = ({
           .music-player {
             padding: 1rem;
           }
-
           .artwork-window {
             width: 200px;
             height: 200px;
             margin-bottom: 1.5rem;
           }
-
           .player-ui {
             padding: 1rem;
             border-radius: 15px;
@@ -289,6 +251,7 @@ const MusicPlayer = ({
     </div>
   );
 };
+
 const PlayIcon = () => (
   <svg viewBox="0 0 24 24" width="24" height="24">
     <path fill="currentColor" d="M8 5v14l11-7z" />
@@ -300,6 +263,7 @@ const PauseIcon = () => (
     <path fill="currentColor" d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
   </svg>
 );
+
 const VolumeIcon = () => (
   <svg viewBox="0 0 24 24" width="24" height="24">
     <path
@@ -308,4 +272,5 @@ const VolumeIcon = () => (
     />
   </svg>
 );
+
 export default MusicPlayer;
