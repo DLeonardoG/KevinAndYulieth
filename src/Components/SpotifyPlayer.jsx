@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 
 const MusicPlayer = ({
   audioSrc,
-  artwork,
+  backgroundImage,
   title,
   artist,
   onNext,
@@ -74,154 +74,195 @@ const MusicPlayer = ({
     <div className="music-player">
       <audio ref={audioRef} src={audioSrc} />
       
+      <div 
+        className="background-image" 
+        style={{ backgroundImage: `url(${backgroundImage})` }}
+      />
+      <div className="overlay" />
+      
       <div className="player-content">
-        <div className="artwork-container">
-          <img 
-            src={artwork} 
-            alt="Album Artwork" 
-            className={`artwork ${isPlaying ? 'rotating' : ''}`}
-          />
-        </div>
-
-        <div className="track-info">
-          <h3 className="title">{title}</h3>
-          <p className="artist">{artist}</p>
-        </div>
-
-        <div className="progress-container" ref={progressBarRef} onClick={handleSeek}>
+        <div className="artwork-window">
           <div 
-            className="progress-bar" 
-            style={{ width: `${(currentTime / duration) * 100}%` }}
+            className="artwork-overlay" 
+            style={{ backgroundImage: `url(${backgroundImage})` }}
           />
-          <div className="time-display">
-            <span>{formatTime(currentTime)}</span>
-            <span>{formatTime(duration)}</span>
-          </div>
         </div>
 
-        <div className="controls">
-          <button 
-            className={`control-btn shuffle ${isShuffled ? 'active' : ''}`}
-            onClick={() => setIsShuffled(!isShuffled)}
-          >
-            <ShuffleIcon />
-          </button>
+        <div className="player-ui">
+          <div className="track-info">
+            <h3 className="title">{title}</h3>
+            <p className="artist">{artist}</p>
+          </div>
 
-          <div className="main-controls">
+          <div 
+            className="progress-container" 
+            ref={progressBarRef} 
+            onClick={handleSeek}
+          >
+            <div 
+              className="progress-bar" 
+              style={{ width: `${(currentTime / duration) * 100}%` }}
+            />
+            <div className="time-display">
+              <span>{formatTime(currentTime)}</span>
+              <span>{formatTime(duration)}</span>
+            </div>
+          </div>
+
+          <div className="controls">
             <button 
-              className="control-btn" 
-              onClick={onPrevious}
-              disabled={!hasPrevious}
+              className={`control-btn shuffle ${isShuffled ? 'active' : ''}`}
+              onClick={() => setIsShuffled(!isShuffled)}
             >
-              <PreviousIcon />
+              <ShuffleIcon />
             </button>
-            
+
+            <div className="main-controls">
+              <button 
+                className="control-btn" 
+                onClick={onPrevious}
+                disabled={!hasPrevious}
+              >
+                <PreviousIcon />
+              </button>
+              
+              <button 
+                className="play-pause-btn" 
+                onClick={togglePlayPause}
+              >
+                {isPlaying ? <PauseIcon /> : <PlayIcon />}
+              </button>
+              
+              <button 
+                className="control-btn" 
+                onClick={onNext}
+                disabled={!hasNext}
+              >
+                <NextIcon />
+              </button>
+            </div>
+
             <button 
-              className="play-pause-btn" 
-              onClick={togglePlayPause}
+              className={`control-btn repeat ${repeatMode !== 'none' ? 'active' : ''}`}
+              onClick={toggleRepeat}
             >
-              {isPlaying ? <PauseIcon /> : <PlayIcon />}
-            </button>
-            
-            <button 
-              className="control-btn" 
-              onClick={onNext}
-              disabled={!hasNext}
-            >
-              <NextIcon />
+              <RepeatIcon mode={repeatMode} />
             </button>
           </div>
 
-          <button 
-            className={`control-btn repeat ${repeatMode !== 'none' ? 'active' : ''}`}
-            onClick={toggleRepeat}
-          >
-            <RepeatIcon mode={repeatMode} />
-          </button>
-        </div>
-
-        <div className="volume-control">
-          <VolumeIcon />
-          <input
-            type="range"
-            min="0"
-            max="1"
-            step="0.01"
-            value={volume}
-            onChange={(e) => {
-              const newVolume = parseFloat(e.target.value);
-              setVolume(newVolume);
-              audioRef.current.volume = newVolume;
-            }}
-          />
+          <div className="volume-control">
+            <VolumeIcon />
+            <input
+              type="range"
+              min="0"
+              max="1"
+              step="0.01"
+              value={volume}
+              onChange={(e) => {
+                const newVolume = parseFloat(e.target.value);
+                setVolume(newVolume);
+                audioRef.current.volume = newVolume;
+              }}
+            />
+          </div>
         </div>
       </div>
 
       <style jsx>{`
         .music-player {
-          background: linear-gradient(145deg, #1a1a1a, #2d2d2d);
-          border-radius: 20px;
-          padding: 30px;
-          max-width: 450px;
-          margin: 2rem auto;
-          box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-          color: #fff;
-        }
-
-        .player-content {
-          display: flex;
-          flex-direction: column;
-          gap: 25px;
-        }
-
-        .artwork-container {
           position: relative;
-          width: 200px;
-          height: 200px;
-          margin: 0 auto;
-          border-radius: 15px;
+          min-height: 100vh;
+          padding: 2rem 1rem;
           overflow: hidden;
-          box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+          background: #000;
         }
 
-        .artwork {
+        .background-image {
+          position: absolute;
+          top: 0;
+          left: 0;
           width: 100%;
           height: 100%;
-          object-fit: cover;
-          transition: transform 0.3s ease;
+          background-size: cover;
+          background-position: center;
+          z-index: 1;
+          filter: blur(8px);
         }
 
-        .rotating {
-          animation: rotation 20s infinite linear;
+        .overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background:  rgba(0,0,0,0.5);
+          z-index: 2;
         }
 
-        @keyframes rotation {
-          from { transform: rotate(0deg); }
-          to { transform: rotate(360deg); }
+        .artwork-window {
+          position: relative;
+          width: 250px;
+          height: 250px;
+          margin: 0 auto 2rem;
+          border-radius: 50%;
+          overflow: hidden;
+          z-index: 3;
+          box-shadow: 0 0 40px rgba(0,0,0,0.5);
+          border: 3px solid rgba(255,255,255,0.1);
+          backdrop-filter: blur(10px);
+        }
+
+        .artwork-overlay {
+          position: absolute;
+          top: -50%;
+          left: -50%;
+          width: 200%;
+          height: 200%;
+          background-size: cover;
+          background-position: center;
+          transform: rotate(0deg);
+          animation: ${isPlaying ? 'rotation 20s infinite linear' : 'none'};
+          z-index: 1;
+        }
+
+        .player-ui {
+          position: relative;
+          z-index: 4;
+          background: transparent;
+          border-radius: 20px;
+          padding: 2rem 1rem;
+          margin: 0 auto;
+          max-width: 400px;
+          backdrop-filter: blur(10px);
+          border: 1px solid rgba(255,255,255,0.1);
         }
 
         .track-info {
           text-align: center;
+          padding: 0 1rem;
+          margin-bottom: 2rem;
         }
 
         .title {
-          font-size: 1.5rem;
-          margin: 0;
-          letter-spacing: 0.5px;
+          font-size: 1.8rem;
+          margin: 0 0 0.5rem;
+          text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+          color: #fff;
         }
 
         .artist {
           color: #b3b3b3;
-          margin: 5px 0 0;
-          font-size: 1rem;
+          font-size: 1.1rem;
+          margin: 0;
         }
 
         .progress-container {
           height: 4px;
-          background: #404040;
+          background: rgba(255,255,255,0.1);
           border-radius: 2px;
           cursor: pointer;
           position: relative;
+          margin: 1rem 0;
         }
 
         .progress-bar {
@@ -244,6 +285,7 @@ const MusicPlayer = ({
           justify-content: space-between;
           align-items: center;
           gap: 15px;
+          margin-top: 1.5rem;
         }
 
         .main-controls {
@@ -298,13 +340,13 @@ const MusicPlayer = ({
           display: flex;
           align-items: center;
           gap: 10px;
-          margin-top: 15px;
+          margin-top: 1.5rem;
         }
 
         input[type="range"] {
           width: 100px;
           height: 4px;
-          background: #404040;
+          background: rgba(255,255,255,0.1);
           -webkit-appearance: none;
           border-radius: 2px;
         }
@@ -317,12 +359,42 @@ const MusicPlayer = ({
           border-radius: 50%;
           cursor: pointer;
         }
+
+        @media (max-width: 480px) {
+          .music-player {
+            padding: 1rem;
+          }
+
+          .artwork-window {
+            width: 200px;
+            height: 200px;
+            margin-bottom: 1.5rem;
+          }
+
+          .player-ui {
+            padding: 1.5rem 1rem;
+            border-radius: 15px;
+          }
+
+          .title {
+            font-size: 1.5rem;
+          }
+
+          .artist {
+            font-size: 1rem;
+          }
+        }
+
+        @keyframes rotation {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
       `}</style>
     </div>
   );
 };
 
-// Iconos SVG como componentes
+// Iconos SVG
 const PlayIcon = () => (
   <svg viewBox="0 0 24 24" width="24" height="24">
     <path fill="currentColor" d="M8 5v14l11-7z"/>
