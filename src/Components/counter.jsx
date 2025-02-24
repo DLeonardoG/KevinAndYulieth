@@ -1,63 +1,81 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback, memo } from 'react';
 import { motion } from 'framer-motion';
 
 const Countdown = () => {
-  const [timeLeft, setTimeLeft] = useState({
+  const [time, setTime] = useState({
     days: 0,
     hours: 0,
     minutes: 0,
     seconds: 0
   });
 
-  // Fecha de la boda (cambiar por la deseada)
   const targetDate = new Date('2025-03-28T17:00:00').getTime();
 
+  const updateTime = useCallback(() => {
+    const now = Date.now();
+    const difference = targetDate - now;
+
+    if (difference > 0) {
+      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+      setTime(prev => ({
+        days: prev.days !== days ? days : prev.days,
+        hours: prev.hours !== hours ? hours : prev.hours,
+        minutes: prev.minutes !== minutes ? minutes : prev.minutes,
+        seconds: prev.seconds !== seconds ? seconds : prev.seconds
+      }));
+    }
+  }, [targetDate]);
+
   useEffect(() => {
-    const interval = setInterval(() => {
-      const now = new Date().getTime();
-      const difference = targetDate - now;
-
-      if (difference > 0) {
-        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-
-        setTimeLeft({ days, hours, minutes, seconds });
-      }
-    }, 1000);
-
+    const interval = setInterval(updateTime, 1000);
+    updateTime();
     return () => clearInterval(interval);
-  }, []);
+  }, [updateTime]);
 
-  const TimeUnit = ({ value, label }) => (
-    <motion.div
-      key={`${value}-${label}`}
-      initial={{ y: -10, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      className="text-center p-4"
-    >
-      <div className="text-4xl md:text-5xl font-bold text-rose-400 mb-2">
-        {value.toString().padStart(2, '0')}
+  const TimeUnit = memo(({ value, label }) => (
+    <div className="text-center p-1 md:p-3 flex-1">
+      <div className="relative h-14 md:h-20 overflow-hidden">
+        <motion.div
+          key={value}
+          initial={{ y: -20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          exit={{ y: 20, opacity: 0 }}
+          transition={{ duration: 0.3 }}
+          className="absolute w-full"
+        >
+          <span className="text-2xl md:text-4xl lg:text-5xl font-bold text-rose-600 block">
+            {value.toString().padStart(2, '0')}
+          </span>
+        </motion.div>
       </div>
-      <div className="text-sm uppercase tracking-widest text-rose-300">
+      <span className="text-xs md:text-sm lg:text-base text-rose-500 uppercase tracking-wide block">
         {label}
-      </div>
-    </motion.div>
-  );
+      </span>
+    </div>
+  ));
 
   return (
     <div className="min-h-screen bg-rose-50 flex items-center justify-center p-4">
-      <div className="bg-white rounded-xl shadow-lg p-6 md:p-8">
-        <div className="flex flex-wrap justify-center gap-4 md:gap-8">
-          <TimeUnit value={timeLeft.days} label="Días" />
-          <TimeUnit value={timeLeft.hours} label="Horas" />
-          <TimeUnit value={timeLeft.minutes} label="Minutos" />
-          <TimeUnit value={timeLeft.seconds} label="Segundos" />
-        </div>
+      <div className="bg-white/90 backdrop-blur-lg rounded-2xl shadow-xl p-4 md:p-6 w-full max-w-lg lg:max-w-2xl">
+        <h1 className="text-center text-lg md:text-xl lg:text-2xl font-semibold text-rose-700 mb-4 md:mb-6">
+          Cuenta regresiva para nuestra boda
+        </h1>
         
-        <div className="mt-6 text-center text-sm text-rose-300">
-          Hasta el día más especial • 28 Marzo 2025
+        <div className="flex justify-between gap-1 md:gap-3">
+          <TimeUnit value={time.days} label="Días" />
+          <TimeUnit value={time.hours} label="Horas" />
+          <TimeUnit value={time.minutes} label="Minutos" />
+          <TimeUnit value={time.seconds} label="Segundos" />
+        </div>
+
+        <div className="mt-4 md:mt-6 text-center">
+          <p className="text-xs md:text-sm lg:text-base text-rose-600">
+            28 Marzo 2025 • Querétaro, México
+          </p>
         </div>
       </div>
     </div>
