@@ -11,27 +11,15 @@ const MusicPlayer = ({ audioSrc, backgroundImage }) => {
   useEffect(() => {
     const audio = audioRef.current;
 
-    const updateMetaData = () => {
-      setDuration(audio.duration);
-      audio.play().catch(() => {}); // Intenta autoplay al cargar
-      setIsPlaying(true);
-    };
-
+    const updateMetaData = () => setDuration(audio.duration);
     const updateTime = () => setCurrentTime(audio.currentTime);
-
-    const handleEnd = () => {
-      audio.currentTime = 0;
-      audio.play();
-    };
 
     audio.addEventListener("loadedmetadata", updateMetaData);
     audio.addEventListener("timeupdate", updateTime);
-    audio.addEventListener("ended", handleEnd);
 
     return () => {
       audio.removeEventListener("loadedmetadata", updateMetaData);
       audio.removeEventListener("timeupdate", updateTime);
-      audio.removeEventListener("ended", handleEnd);
     };
   }, []);
 
@@ -106,6 +94,13 @@ const MusicPlayer = ({ audioSrc, backgroundImage }) => {
             </div>
           </div>
         </div>
+        <div className="phrase text-white flex flex-col gap-3 bg-black">
+          <cite>
+            "Uno solo puede ser vencido, pero dos pueden resistir. ¡La cuerda de
+            tres hilos no se rompe fácilmente!"
+          </cite>
+          <strong className="text-end">Eclesiastés 4:12</strong>
+        </div>
       </div>
       <style jsx>{`
         .music-player {
@@ -124,7 +119,7 @@ const MusicPlayer = ({ audioSrc, backgroundImage }) => {
           background-size: cover;
           background-position: center;
           z-index: 1;
-          filter: blur(8px);
+          filter: blur(5px);
         }
         .overlay {
           position: absolute;
@@ -165,6 +160,18 @@ const MusicPlayer = ({ audioSrc, backgroundImage }) => {
           border-radius: 20px;
           padding: 1rem;
           margin: 0 auto;
+          max-width: 400px;
+          backdrop-filter: blur(10px);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .phrase {
+          position: relative;
+          z-index: 4;
+          background: transparent;
+          border-radius: 20px;
+          padding: 1rem;
+          margin: 0 auto;
+          margin-top: 1rem;
           max-width: 400px;
           backdrop-filter: blur(10px);
           border: 1px solid rgba(255, 255, 255, 0.1);
