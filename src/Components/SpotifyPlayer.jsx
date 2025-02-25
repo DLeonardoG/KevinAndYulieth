@@ -94,12 +94,18 @@ const MusicPlayer = ({ audioSrc, backgroundImage }) => {
             </div>
           </div>
         </div>
-        <div className="phrase text-white flex flex-col gap-3 bg-black">
+        <div className="phrase text-white text- flex flex-col gap-3 bg-black">
           <cite>
-            "Uno solo puede ser vencido, pero dos pueden resistir. ¡La cuerda de
-            tres hilos no se rompe fácilmente!"
+          "El que ama tiene paciencia en todo, y siempre es amable.
+El que ama no es envidioso, ni se cree más que nadie. No es orgulloso. 
+No es grosero ni egoísta. 
+No se enoja por cualquier cosa. 
+No se pasa la vida recordando lo malo que otros le han hecho. 
+No aplaude a los malvados, sino a los que hablan con la verdad. 
+El que ama es capaz de aguantarlo todo, de creerlo todo, de esperarlo todo, de soportarlo todo. 
+Sólo el amor vive para siempre."
           </cite>
-          <strong className="text-end">Eclesiastés 4:12</strong>
+          <strong className="text-end">1 Corintios 13: 4-8</strong>
         </div>
       </div>
       <style jsx>{`
