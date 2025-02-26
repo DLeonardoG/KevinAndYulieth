@@ -61,9 +61,7 @@ export const Invitation = () => {
             <Timeline />
             <WeddingDetails />
             <RSVPForm
-              nombreInvitado={guest.family_name}
-              numPersonas={guest.total_members}
-              personasInvitadas={guest.members}
+              invitacion={guest}
             />
             <Carousel slides={slides} />
           </div>
