@@ -7,6 +7,8 @@ import Description from "./description.jsx";
 import song from "../assets/audio/song.mp3";
 import photo1 from "../assets/img/photo1.jpg";
 import background1 from "../assets/img/background1.svg";
+import Carousel from './Carousel';
+import Timeline from './Timeline';
 
 export const Invitation = () => {
   const { id } = useParams();
@@ -30,8 +32,16 @@ export const Invitation = () => {
     return <div>{error}</div>;
   }
 
+  const slides = [
+    '/photo1.jpg',
+    '/photo2.jpg',
+    '/photo3.jpg',
+    '/photo4.jpg',
+    '/photo5.jpg'
+  ];
+
   return (
-    <div>
+    <div className="bg-[#ffe4ed]">
       {guest && (
         <>
           <MusicPlayer audioSrc={song} backgroundImage={photo1} />
@@ -44,6 +54,11 @@ export const Invitation = () => {
             }}
           ></div>
           <Description />
+          <div className="max-w-7xl mx-auto px-4 py-8">
+      <Carousel slides={slides} />
+      <Timeline />
+    </div>
+
           <h1>Invitación para {guest.name}</h1>
         </>
       )}
