@@ -20,7 +20,7 @@ export const Invitation = () => {
   const [error, setError] = useState("");
 
   useEffect(() => {
-    const foundGuest = data.find((guest) => guest.id === parseInt(id)); // Busca por "num"
+    const foundGuest = data.find((guest) => guest.id_web === id);
 
     if (foundGuest) {
       setGuest(foundGuest);
@@ -61,9 +61,9 @@ export const Invitation = () => {
             <Timeline />
             <WeddingDetails />
             <RSVPForm
-              nombreInvitado="Juan Pérez"
-              numPersonas={2}
-              personasInvitadas={["Juan Pérez", "María García"]}
+              nombreInvitado={guest.family_name}
+              numPersonas={guest.total_members}
+              personasInvitadas={guest.members}
             />
             <Carousel slides={slides} />
           </div>
