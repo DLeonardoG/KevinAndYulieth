@@ -1,5 +1,12 @@
 [
     {
+        "num": 0,
+        "id": "1a2a3b",
+        "name": "PRUEBA",
+        "numberOfGuests": 1,
+        "guests": ["BLEIDY SHIRLEY CALDERÓN GARCÍA"]
+    },
+    {
         "num": 1,
         "id": "1a2a3b",
         "name": "BLEIDY CALDERÓN",

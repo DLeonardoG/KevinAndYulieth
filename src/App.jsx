@@ -10,14 +10,8 @@ function App() {
     <UserProvider>
       <Router>
         <Routes>
-          <Route path="/login" element={<Login />} />
           <Route path="/guest/:id" element={<Invitation />} />
-          <Route path="/welcome" element={
-            <ProtectedRoute>
-              <Welcome />
-            </ProtectedRoute>
-          } />
-          <Route path="/" element={<Navigate to="/login" replace />} />
+          <Route path="/" element={<Navigate to="/guest/0" replace />} />
         </Routes>
       </Router>
     </UserProvider>
