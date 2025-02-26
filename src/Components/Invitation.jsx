@@ -9,6 +9,8 @@ import photo1 from "../assets/img/photo1.jpg";
 import background1 from "../assets/img/background1.svg";
 import Carousel from './Carousel';
 import Timeline from './Timeline';
+import WeddingDetails from './WeddingDetails';
+import RSVPForm from './RSVPForm';
 
 export const Invitation = () => {
   const { id } = useParams();
@@ -41,7 +43,7 @@ export const Invitation = () => {
   ];
 
   return (
-    <div className="bg-[#ffe4ed]">
+    <div className="bg-[#f9e5ec]">
       {guest && (
         <>
           <MusicPlayer audioSrc={song} backgroundImage={photo1} />
@@ -57,6 +59,12 @@ export const Invitation = () => {
           <div className="max-w-7xl mx-auto px-4 py-8">
       <Carousel slides={slides} />
       <Timeline />
+      <WeddingDetails/>
+      <RSVPForm 
+  nombreInvitado="Juan Pérez"
+  numPersonas={2}
+  personasInvitadas={['Juan Pérez', 'María García']}
+/>
     </div>
 
           <h1>Invitación para {guest.name}</h1>
