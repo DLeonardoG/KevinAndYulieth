@@ -65,33 +65,42 @@ const RSVPForm = ({ invitacion }) => {
     return true;
   };
 
-  // Enviar confirmación
   const manejarSubmit = async (e) => {
     e.preventDefault();
+    setError('');
     
-    const formData = new URLSearchParams();
-    formData.append('id_web', invitacion.id_web);
-    formData.append('family_name', invitacion.family_name);
-    formData.append('opcion', confirmacion.opcion);
-    formData.append('seleccionados', confirmacion.seleccionados.join(','));
-    formData.append('mensaje', confirmacion.mensaje);
-
+    if (!validarFormulario()) return;
+    
+    setLoading(true);
+    
     try {
-      const response = await fetch(
-        'https://script.google.com/macros/s/AKfycbwCzsJM6NWshBPASCOBtCJ2fy8t5Mztboi7egLaFLqgpP4QP7PbrQK4fYe-eEy0zCbqnQ/exec',
-        {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: formData
-        }
-      );
+      const formData = new URLSearchParams();
+      formData.append('id_web', invitacion.id_web);
+      formData.append('family_name', invitacion.family_name);
+      formData.append('opcion', confirmacion.opcion);
+      formData.append('seleccionados', JSON.stringify(confirmacion.seleccionados));
+      formData.append('mensaje', confirmacion.mensaje);
+      formData.append('miembros', JSON.stringify(invitacion.members));
       
-      const result = await response.text();
-      alert(result);
+      const response = await fetch('https://script.google.com/macros/s/AKfycby4hWR91vzGLT8V0RFedMqPqSqxD9MQB6DUxeQYMqCzVvprT-ppgTwcNoHys4ZeSacbRg/exec', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: formData
+      });
       
+      const result = await response.json();
+      
+      if (result.success) {
+        setSuccess(true);
+        setTimeout(() => setSuccess(false), 3000);
+        setConfirmacion({ opcion: '', seleccionados: [], mensaje: '' });
+      } else {
+        throw new Error(result.error || 'Error desconocido');
+      }
     } catch (error) {
-      console.error('Error:', error);
-      alert('Error al enviar el formulario');
+      setError(error.message);
+    } finally {
+      setLoading(false);
     }
   };
 
