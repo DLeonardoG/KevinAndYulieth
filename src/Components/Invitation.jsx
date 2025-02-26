@@ -7,10 +7,11 @@ import Description from "./description.jsx";
 import song from "../assets/audio/song.mp3";
 import photo1 from "../assets/img/photo1.jpg";
 import background1 from "../assets/img/background1.svg";
-import Carousel from './Carousel';
-import Timeline from './Timeline';
-import WeddingDetails from './WeddingDetails';
-import RSVPForm from './RSVPForm';
+import Carousel from "./Carousel";
+import Timeline from "./Timeline";
+import WeddingDetails from "./WeddingDetails";
+import RSVPForm from "./RSVPForm";
+import WeddingFooter from "./WeddingFooter";
 
 export const Invitation = () => {
   const { id } = useParams();
@@ -35,11 +36,11 @@ export const Invitation = () => {
   }
 
   const slides = [
-    '/photo1.jpg',
-    '/photo2.jpg',
-    '/photo3.jpg',
-    '/photo4.jpg',
-    '/photo5.jpg'
+    "/photo1.jpg",
+    "/photo2.jpg",
+    "/photo3.jpg",
+    "/photo4.jpg",
+    "/photo5.jpg",
   ];
 
   return (
@@ -57,17 +58,16 @@ export const Invitation = () => {
           ></div>
           <Description />
           <div className="max-w-7xl mx-auto px-4 py-8">
-      <Carousel slides={slides} />
-      <Timeline />
-      <WeddingDetails/>
-      <RSVPForm 
-  nombreInvitado="Juan Pérez"
-  numPersonas={2}
-  personasInvitadas={['Juan Pérez', 'María García']}
-/>
-    </div>
-
-          <h1>Invitación para {guest.name}</h1>
+            <Timeline />
+            <WeddingDetails />
+            <RSVPForm
+              nombreInvitado="Juan Pérez"
+              numPersonas={2}
+              personasInvitadas={["Juan Pérez", "María García"]}
+            />
+            <Carousel slides={slides} />
+          </div>
+          <WeddingFooter />
         </>
       )}
     </div>

@@ -63,7 +63,7 @@ function Description() {
             Cra. 20 #6-47
           </span>
           <span className="text-xl md:text-2xl font-semibold text-roseGold">
-            <strong>Hore:</strong> 6:00 PM
+            <strong>Hora:</strong> 6:00 PM
           </span>
 
           <a href="https://www.google.com/maps/place/Iglesia+Adventista+del+s%C3%A9ptimo+d%C3%ADa+-+Norte/@7.1396168,-73.1272981,17z/data=!3m1!4b1!4m6!3m5!1s0x8e6815730bca4eeb:0xa1c501d7f7afe0aa!8m2!3d7.1396168!4d-73.1272981!16s%2Fg%2F11c2j2zd4g?entry=ttu&g_ep=EgoyMDI1MDIyMy4xIKXMDSoASAFQAw%3D%3D" target="_blank">
