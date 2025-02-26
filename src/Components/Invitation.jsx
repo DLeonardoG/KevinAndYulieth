@@ -20,7 +20,7 @@ export const Invitation = () => {
   const [error, setError] = useState("");
 
   useEffect(() => {
-    const foundGuest = data.find((guest) => guest.num === parseInt(id)); // Busca por "num"
+    const foundGuest = data.find((guest) => guest.id === parseInt(id)); // Busca por "num"
 
     if (foundGuest) {
       setGuest(foundGuest);
