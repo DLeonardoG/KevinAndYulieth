@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
+import { useState, useEffect } from "react";
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 
 const Carousel = ({ slides }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -45,13 +45,16 @@ const Carousel = ({ slides }) => {
       {/* Navigation buttons */}
       <button
         onClick={prevSlide}
-        className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/30 p-2 rounded-full hover:bg-white/50 transition-colors duration-300 opacity-0 group-hover:opacity-100"
+        className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/30 p-2 rounded-full hover:bg-white/50 transition-colors duration-300 
+             opacity-100 lg:opacity-0 lg:group-hover:opacity-100"
       >
         <ChevronLeftIcon className="w-6 h-6 text-white" />
       </button>
+
       <button
         onClick={nextSlide}
-        className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/30 p-2 rounded-full hover:bg-white/50 transition-colors duration-300 opacity-0 group-hover:opacity-100"
+        className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/30 p-2 rounded-full hover:bg-white/50 transition-colors duration-300 
+             opacity-100 lg:opacity-0 lg:group-hover:opacity-100"
       >
         <ChevronRightIcon className="w-6 h-6 text-white" />
       </button>
@@ -62,7 +65,7 @@ const Carousel = ({ slides }) => {
             key={index}
             onClick={() => goToSlide(index)}
             className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              currentIndex === index ? 'bg-white' : 'bg-white/50'
+              currentIndex === index ? "bg-white" : "bg-white/50"
             }`}
           />
         ))}

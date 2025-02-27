@@ -7,25 +7,24 @@ function Description() {
       <img
         src="/flowers-left.svg"
         alt="Decoración floral superior"
-        className="absolute top-0 left-0 w-60 md:w-150 h-auto"
+        className="absolute z-0 top-0 left-0 w-60 md:w-150 h-auto"
       />
       <img
         src="/flowers.svg"
         alt="Decoración floral superior derecha"
-        className="absolute top-0 right-0 w-60 md:w-150 h-auto"
+        className="absolute top-0 right-0 w-60 z-0 md:w-150 h-auto"
       />
 
-      <h1 className="text-4xl md:text-4xl mt-15 text-vinotinto font-script mt-5 mb-4">
-        {" "}
-        ¡Faltan!{" "}
+      <h1 className="text-4xl md:text-4xl mt-15 text-vinotinto font-script z-10 mb-4">
+        ¡Faltan!
       </h1>
 
-      <div className="flex justify-center mb-5">
+      <div className="flex justify-center mb-5 z-10">
         <Countdown />
       </div>
 
       <p
-        className="text-roseGold font-serif leading-relaxed text-center px-4 py-2 max-w-[600px] mx-auto tracking-wide"
+        className="text-roseGold z-10 font-serif leading-relaxed text-center px-4 py-2 max-w-[600px] mx-auto tracking-wide"
         style={{ lineHeight: "1.85rem" }}
       >
         Con inmenso amor e ilusión, <br />
@@ -33,12 +32,12 @@ function Description() {
         tenemos el gusto de invitar a celebrar{" "}
       </p>
 
-      <h2 className="mt-6 text-5xl md:text-5xl text-roseGold font-script">
+      <h2 className="mt-6 z-10 text-5xl md:text-5xl text-roseGold font-script">
         Nuestra Boda
       </h2>
 
       <div
-        className="flex flex-col items-center mt-6 p-6 max-w-[300px] mx-auto relative"
+        className="flex z-10 flex-col items-center mt-6 p-6 max-w-[300px] mx-auto relative"
         style={{ fontFamily: "'Playfair Display', serif" }}
       >
         <span
@@ -64,23 +63,23 @@ function Description() {
       </div>
 
       <div
-        className="flex flex-col items-center p-3 mt-6"
+        className="flex flex-col z-10 items-center p-3 mt-6"
         style={{
           fontFamily: "'Playfair Display', serif",
           textAlign: "center",
         }}
       >
-        <h4 className="font-semibold text-[#6c201f] tracking-wide text-3xl font-script">
+        <h4 className="font-semibold z-10 text-[#6c201f] tracking-wide text-3xl font-script">
           Ceremonia
         </h4>
-        <h3 className="font-bold font-serif text-[#ad4658] px-3 text-3xl mb-2">
+        <h3 className="font-bold font-serif z-10 text-[#ad4658] px-3 text-3xl mb-2">
           Iglesia Adventista Norte
         </h3>
 
-        <p className="text-[#150103] text-2xl mb-2 font-serif">
+        <p className="text-[#150103] z-10 text-2xl mb-2 font-serif">
           Cra. 20 #6-47
         </p>
-        <div className="flex items-center gap-2 mt-1 text-2xl font-medium">
+        <div className="flex items-center z-10 gap-2 mt-1 text-2xl font-medium">
           <span className="font-serif text-[#000000]">
             <span className="font-serif text-[#a52d2d]">Hora: </span>6:00 p.m.
           </span>
@@ -126,12 +125,12 @@ function Description() {
       <img
         src="/flowers.svg"
         alt="Decoración floral inferior"
-        className="absolute bottom-0 left-0 w-60 md:w-150 h-auto rotate-180"
+        className="absolute bottom-0 z-0 left-0 w-60 md:w-150 h-auto rotate-180"
       />
       <img
         src="/flowers-left.svg"
         alt="Decoración floral inferior derecha"
-        className="absolute md:w-150 bottom-0 right-0 w-60 h-auto rotate-180"
+        className="absolute md:w-150 z-0 bottom-0 right-0 w-60 h-auto rotate-180"
       />
     </div>
   );
