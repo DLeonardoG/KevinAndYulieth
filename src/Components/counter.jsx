@@ -15,21 +15,21 @@ const TimeUnit = React.memo(({ label, value }) => {
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 1.2, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="text-3xl sm:text-5xl font-bold text-[#e04386] font-serif"
+            className="text-3xl sm:text-5xl font-bold text-[#e04355] font-serif"
           >
             {formattedValue}
           </motion.span>
         </AnimatePresence>
       </div>
       {/* Etiqueta diferenciada en tipografía sans-serif y color más suave */}
-      <span className="text-xs sm:text-sm font-semibold uppercase text-gray-600 mt-2 font-sans">
+      <span className="text-xs sm:text-sm text-gray-800 m-0 font-serif">
         {label}
       </span>
     </div>
   );
 });
 
-const Countdown = ({ targetDate = '2025-03-28T17:00:00' }) => {
+const Countdown = ({ targetDate = '2025-03-28T18:00:00' }) => {
   const calculateTimeLeft = () => {
     const difference = +new Date(targetDate) - +new Date();
     if (difference > 0) {

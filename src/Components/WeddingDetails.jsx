@@ -40,14 +40,9 @@ const WeddingDetails = () => {
                 El mejor regalo es tu presencia y compañía.
               </p>
               <div className="my-6">
-                <svg 
-                  className="w-20 h-20 mx-auto text-gray-500"
-                  viewBox="0 0 400 300"
-                  fill="currentColor"
-                >
-                  {/* Icono SVG simplificado */}
-                  <path d="M110.3 167.4c0.3 0.9..."></path>
-                </svg>
+              <img className="w-20 h-20 mx-auto text-gray-500" src="/sobre.svg">
+              
+</img>
               </div>
               <h3 className="text-lg font-semibold text-gray-800">
                 Lluvia de sobres
