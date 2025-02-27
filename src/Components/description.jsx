@@ -16,17 +16,14 @@ function Description() {
           className="absolute top-0 right-0 w-32 h-auto"
         />
 
-        {/* Título 'Faltan!' */}
         <h1 className="text-3xl md:text-4xl text-vinotinto font-bold mb-4">
           ¡Faltan!
         </h1>
 
-        {/* Contador */}
         <div className="flex justify-center mb-6">
           <Countdown />
         </div>
 
-        {/* Texto de invitación */}
         <p className="text-roseGold text-base md:text-lg leading-relaxed font-light">
           Con inmenso amor e ilusión,
           <br />

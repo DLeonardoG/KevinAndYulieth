@@ -49,22 +49,19 @@ export const Invitation = () => {
         <>
           <MusicPlayer audioSrc={song} backgroundImage={photo1} />
           <div
-            className="bg-black h-screen"
+            className="min-h-screen h-auto bg-black"
             style={{
               backgroundImage: `url(${background1})`,
               backgroundSize: "cover",
-              backgroundPosition: "center",
+              backgroundPosition: "top",
+              backgroundRepeat: "no-repeat",
             }}
           ></div>
           <Description />
-          <div className="max-w-7xl mx-auto px-4 py-8">
             <Timeline />
             <WeddingDetails />
-            <RSVPForm
-              invitacion={guest}
-            />
+            <RSVPForm invitacion={guest} />
             <Carousel slides={slides} />
-          </div>
           <WeddingFooter />
         </>
       )}

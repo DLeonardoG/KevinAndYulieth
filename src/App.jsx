@@ -1,9 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { UserProvider } from './UserContext';
 import { useUser } from './UserContext';
-import { Login } from './Components/Login';
 import { Invitation } from './Components/Invitation';
-import { Welcome } from './Components/Welcome';
 
 function App() {
   return (
@@ -18,7 +16,7 @@ function App() {
   );
 }
 
-// Componente para rutas protegidas
+
 const ProtectedRoute = ({ children }) => {
   const { user } = useUser();
   return user ? children : <Navigate to="/login" replace />;
