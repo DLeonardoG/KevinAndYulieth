@@ -16,6 +16,7 @@ function Description() {
           className="absolute top-0 right-0 w-32 h-auto"
         />
 
+
         <h1 className="text-3xl md:text-4xl text-vinotinto font-bold mb-4">
           ¡Faltan!
         </h1>
