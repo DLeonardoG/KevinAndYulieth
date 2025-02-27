@@ -23,7 +23,7 @@
     {
       "id": 3,
       "id_web": "leonardo",
-      "family_name": "LEONARDO GONZALES Y SRA.",
+      "family_name": "LEONARDO GONZALEZ Y SRA.",
       "total_members": 2,
       "members": ["GUILLERMINA CALDERÓN PARRA", "LEONARDO GONZALEZ"]
     },
@@ -50,7 +50,7 @@
     },
     {
       "id": 7,
-      "id_web": "jose2",
+      "id_web": "joseleonardo",
       "family_name": "JOSE LEONARDO GONZALEZ, SRA. E HIJO",
       "total_members": 3,
       "members": [
@@ -304,7 +304,7 @@
     },
     {
       "id": 41,
-      "id_web": "pr",
+      "id_web": "gleison",
       "family_name": "PR. GLEISSON PEMBERTY, SRA E HIJO",
       "total_members": 3,
       "members": ["GLEISSON", "LAURA", "HIJO"]
