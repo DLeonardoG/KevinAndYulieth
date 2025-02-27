@@ -1,5 +1,12 @@
 [
     {
+      "id":0,
+      "id_web": "invitado",
+      "family_name": "INVITADO",
+      "total_members": 1,
+      "members": ["INVITADO"]
+    },
+    {
       "id": 1,
       "id_web": "bleidy",
       "family_name": "BLEIDY CALDERÓN",

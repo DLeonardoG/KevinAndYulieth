@@ -10,8 +10,8 @@ function App() {
     <UserProvider>
       <Router>
         <Routes>
-          <Route path="/guest/:id" element={<Invitation />} />
-          <Route path="/" element={<Navigate to="/guest/0" replace />} />
+          <Route path="/:id" element={<Invitation />} />
+          <Route path="/" element={<Navigate to="/invitado" replace />} />
         </Routes>
       </Router>
     </UserProvider>
