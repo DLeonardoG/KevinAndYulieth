@@ -47,7 +47,6 @@ export const Invitation = () => {
     <div className="bg-[#f9e5ec]">
       {guest && (
         <>
-          <MusicPlayer audioSrc={song} backgroundImage={photo1} />
           <div
             className="min-h-screen h-auto bg-black"
             style={{
@@ -57,6 +56,7 @@ export const Invitation = () => {
               backgroundRepeat: "no-repeat",
             }}
           ></div>
+          <MusicPlayer audioSrc={song} backgroundImage={photo1} />
           <Description />
             <Timeline />
             <WeddingDetails />
