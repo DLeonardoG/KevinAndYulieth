@@ -119,7 +119,7 @@ function Description() {
         <a
           href="https://www.google.com/maps/place/Iglesia+Adventista+del+s%C3%A9ptimo+d%C3%ADa+-+Norte/@7.1396168,-73.1272981,17z/data=!3m1!4b1!4m6!3m5!1s0x8e6815730bca4eeb:0xa1c501d7f7afe0aa!8m2!3d7.1396168!4d-73.1272981!16s%2Fg%2F11c2j2zd4g?entry=ttu&g_ep=EgoyMDI1MDIyMy4xIKXMDSoASAFQAw%3D%3D"
           target="_blank"
-          className="inline-flex md:text-3xl md: items-center gap-2 text-white bg-[#ad4658] py-3 px-6 rounded-lg mt-3 transition-all duration-300 ease-in-out cursor-pointer border-2 border-[#ad4658] shadow-sm hover:bg-[#ad4658] hover:text-white z-10"
+          className="inline-flex md:text-3xl items-center gap-2 text-white bg-[#ad4658] py-3 px-6 rounded-lg mt-3 transition-all duration-300 ease-in-out cursor-pointer border-2 border-[#ad4658] shadow-sm hover:bg-[#ad4658] hover:text-white z-10"
           onMouseOver={(e) => {
             e.currentTarget.style.backgroundColor = "transparent";
             e.currentTarget.style.color = "#ad4658";
@@ -159,17 +159,17 @@ function Description() {
           textAlign: "center",
         }}
       >
-        <h4 className="font-semibold z-10 text-[#6c201f] tracking-wide text-3xl font-script">
+        <h4 className="font-semibold md:text-6xl z-10 text-[#6c201f] tracking-wide text-3xl font-script">
           Recepción
         </h4>
-        <h3 className="font-bold font-serif z-10 text-[#ad4658] px-3 text-3xl mb-2">
+        <h3 className="font-bold font-serif md:text-5xl z-10 text-[#ad4658] px-3 text-3xl mb-2">
           Festejos Rojas
         </h3>
 
-        <p className="text-[#150103] z-10 text-2xl mb-2 font-serif">
-          Avenida Eduardo Santos #28-49
+        <p className="text-[#150103] z-10 md:text-4xl text-2xl mb-2 font-serif">
+          Avenida Eduardo <br/> Santos #28-49
         </p>
-        <div className="flex items-center z-10 gap-2 mt-1 text-2xl font-medium">
+        <div className="flex items-center z-10 gap-2 mt-1 md:text-3xl text-2xl font-medium">
           <span className="font-serif text-[#000000]">
             <span className="font-serif text-[#a52d2d]">Hora: </span>6:00 p.m.
           </span>
@@ -178,7 +178,7 @@ function Description() {
         <a
           href="https://www.google.com/maps/place/Ave+Eduardo+Santos+%2328-49,+Bucaramanga,+Santander/@7.1338617,-73.1188956,17z/data=!3m1!4b1!4m6!3m5!1s0x8e68156f1fb5f8c9:0x923acea376168ec8!8m2!3d7.1338617!4d-73.1188956!16s%2Fg%2F11h59rfnxr?entry=ttu&g_ep=EgoyMDI1MDIyNS4wIKXMDSoASAFQAw%3D%3D"
           target="_blank"
-          className="inline-flex items-center gap-2 text-white bg-[#ad4658] py-3 px-6 rounded-lg mt-3 transition-all duration-300 ease-in-out cursor-pointer border-2 border-[#ad4658] shadow-sm hover:bg-[#ad4658] hover:text-white z-10"
+          className="inline-flex items-center md:text-3xl gap-2 text-white bg-[#ad4658] py-3 px-6 rounded-lg mt-3 transition-all duration-300 ease-in-out cursor-pointer border-2 border-[#ad4658] shadow-sm hover:bg-[#ad4658] hover:text-white z-10"
           onMouseOver={(e) => {
             e.currentTarget.style.backgroundColor = "transparent";
             e.currentTarget.style.color = "#ad4658";
