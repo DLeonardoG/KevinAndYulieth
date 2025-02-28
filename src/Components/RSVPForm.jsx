@@ -114,7 +114,7 @@ const RSVPForm = ({ invitacion }) => {
   };
 
   return (
-    <div className="max-w-2xl mx-auto p-8 bg-crema-claro rounded-lg shadow-xl border border-dorado">
+    <div className="max-w-2xl mt-8 mx-auto p-8 bg-crema-claro rounded-lg shadow-xl border border-dorado">
       <style jsx>{`
         @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Merriweather&display=swap");
 
