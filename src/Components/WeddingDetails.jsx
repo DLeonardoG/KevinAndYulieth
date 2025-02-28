@@ -1,10 +1,10 @@
 const WeddingDetails = () => {
     return (
-      <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+      <div className="min-h-screen bg-[#fd8684] py-12 mt-10 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg shadow-lg p-6">
             <div className="text-center mb-6">
-              <h2 className="text-2xl font-serif mb-4 text-gray-800 wedding-title">
+              <h2 className="text-4xl font-script mb-4 text-gray-800 wedding-title">
                 Código de vestuario
               </h2>
               <img 
@@ -12,7 +12,7 @@ const WeddingDetails = () => {
                 alt="Traje formal"
                 className="w-full h-auto mb-4 rounded-lg"
               />
-              <p className="font-semibold mb-2 text-gray-700">Traje de Cóctel</p>
+              <p className="font-semibold mb-2 font-serif text-xl text-gray-700">Traje de Cóctel</p>
               <p className="text-sm text-gray-600 mb-4 leading-relaxed">
                 Reservamos el color blanco y vinotinto en mujeres para uso exclusivo de la novia.
                 <br />
@@ -30,16 +30,16 @@ const WeddingDetails = () => {
           </div>  
           <div className="bg-white rounded-lg shadow-lg p-6">
             <div className="text-center mb-6">
-              <h2 className="text-2xl font-serif mb-4 text-gray-800 wedding-title">
+              <h2 className="text-2xl font-script text-5xl mb-4 text-gray-800 wedding-title">
                 Regalo
               </h2>
               <p className="text-lg mb-4 text-gray-700 italic">
                 El mejor regalo es tu presencia y compañía.
               </p>
-              <div className="my-6">
-              <img className="w-20 h-20 mx-auto text-gray-500" src="/sobre.svg"></img>
+              <div className="my-4">
+              <img className="w-35 h-35 mx-auto text-gray-500" src="/sobre.svg"></img>
               </div>
-              <h3 className="text-lg font-semibold text-gray-800">
+              <h3 className="text-2xl font-semibold italic text-gray-800">
                 Lluvia de sobres
               </h3>
             </div>

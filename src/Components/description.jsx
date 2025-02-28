@@ -23,38 +23,70 @@ function Description() {
         <Countdown />
       </div>
 
-      <p
-        className="text-roseGold z-10 font-serif leading-relaxed text-center px-4 py-2 max-w-[600px] mx-auto tracking-wide"
-        style={{ lineHeight: "1.85rem" }}
-      >
-        Carlos Valbuena <br/> Yudy Mar Antolinez <br/> & <br/>Edgar Calderón <br/>Nelly García<br/>
-        Tenemos el gusto de invitarlos a la boda de nuestros hijos:
-      </p>
+      <div className="flex flex-col items-center justify-center py-8 px-2">
+        <div className="w-full max-w-[600px] grid grid-cols-3 gap-4 items-center">
+          {/* Columna Izquierda */}
+          <div className="text-roseGold text-left leading-relaxed space-y-2">
+            <div
+              className="flex flex-col items-start text-2xl space-y-1"
+              style={{ fontFamily: "'Dancing Script', cursive" }}
+            >
+              <p>Carlos Valbuena</p>
+              <span className="h-px w-full bg-black"></span>
+              <p className="text-xl">Yudy Mar Antolinez</p>
+            </div>
+          </div>
 
-      <h2 className="mt-6 z-10 text-5xl md:text-5xl text-roseGold font-script">
-        Harley<br/>&<br/>Yulieth
-      </h2>
+          {/* Columna Centro */}
+          <div className="flex justify-center items-center">
+            <p className="text-roseGold font-serif text-center text-5xl">&</p>
+          </div>
+
+          {/* Columna Derecha */}
+          <div
+            className="text-roseGold font-serif text-right leading-relaxed"
+            style={{ fontFamily: "'Dancing Script', cursive" }}
+          >
+            <div className="flex flex-col items-end space-y-1">
+              <p className="text-2xl">Edgar Calderón</p>
+              <span className="h-px w-full bg-black"></span>
+              <p className="text-2xl">Nelly García</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Texto inferior */}
+        <p className="text-roseGold font-serif text-center mt-6 px-4 leading-relaxed text-xl max-w-[600px]">
+          Tenemos el gusto de invitarlos a la boda de nuestros hijos:
+        </p>
+      </div>
+
+      <h3 className="mt-6 z-10 text-7xl md:text-5xl text-roseGold font-script">
+        Harley
+        <br />&<br />
+        Yulieth
+      </h3>
 
       <div
         className="flex z-10 flex-col items-center mt-6 p-6 max-w-[300px] mx-auto relative"
         style={{ fontFamily: "'Playfair Display', serif" }}
       >
         <span
-          className="text-lg font-medium text-[#c68678] tracking-wider uppercase mb-1"
+          className="text-2xl font-medium text-[#c68678] tracking-wider uppercase mb-1"
           style={{ fontFamily: "'Playfair Display', serif" }}
         >
           Domingo
         </span>
 
         <span
-          className="text-[4rem] font-bold text-[#c68678] leading-none mb-1"
+          className="text-[6rem] font-bold text-[#c68678] leading-none mb-1"
           style={{ fontFamily: "'Dancing Script', cursive" }}
         >
           23
         </span>
 
         <span
-          className="text-lg font-medium text-[#c68678] tracking-wider uppercase"
+          className="text-2xl font-medium text-[#c68678] tracking-wider uppercase"
           style={{ fontFamily: "'Playfair Display', serif" }}
         >
           Marzo
@@ -135,8 +167,7 @@ function Description() {
         </h3>
 
         <p className="text-[#150103] z-10 text-2xl mb-2 font-serif">
-        Avenida Eduardo Santos #28-49
-
+          Avenida Eduardo Santos #28-49
         </p>
         <div className="flex items-center z-10 gap-2 mt-1 text-2xl font-medium">
           <span className="font-serif text-[#000000]">
