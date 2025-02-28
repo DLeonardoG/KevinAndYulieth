@@ -169,7 +169,7 @@ const RSVPForm = ({ invitacion }) => {
           alt="Flor decorativa"
           className="mx-auto w-full opacity-90 rotate-180"
         />
-        <h2 className="text-5xl font-script text-dorado">Harley & Yulieth</h2>
+        <h2 className="text-5xl md:text-7xl font-script text-dorado">Harley & Yulieth</h2>
         <img
           src="/flor_abajito.svg"
           alt="Flor decorativa"
@@ -214,7 +214,7 @@ const RSVPForm = ({ invitacion }) => {
 
       {/* Formulario RSVP */}
       <div className="bg-white py-8 px-4 rounded-lg shadow-inner border border-dorado-claro">
-        <h2 className="text-4xl font-script text-dorado text-center mb-6">
+        <h2 className="text-4xl md:text-6xl font-script text-dorado text-center mb-6">
           Confirma tu asistencia
         </h2>
 
@@ -371,7 +371,7 @@ const RSVPForm = ({ invitacion }) => {
           alt="Flor decorativa"
           className="mx-auto w-full opacity-90"
         />
-        <p className="font-script text-dorado text-3xl">
+        <p className="font-script md:text-5xl text-dorado text-3xl">
           ¡Esperamos compartir este momento contigo!
         </p>
       </div>

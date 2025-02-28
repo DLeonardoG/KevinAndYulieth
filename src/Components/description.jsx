@@ -15,7 +15,7 @@ function Description() {
         className="absolute top-0 right-0 w-60 z-0 md:w-150 h-auto"
       />
 
-      <h2 className="text-5xl md:text-4xl mt-17 text-vinotinto font-script z-10 mb-4">
+      <h2 className="text-5xl md:text-9xl md:mt-30 mt-17 text-vinotinto font-script z-10 mb-4">
         ¡Faltan!
       </h2>
 
@@ -28,18 +28,18 @@ function Description() {
           {/* Columna Izquierda */}
           <div className="text-roseGold text-left leading-relaxed space-y-2">
             <div
-              className="flex flex-col items-start text-2xl space-y-1"
+              className="flex flex-col items-start text-2xl md:text-6xl space-y-1"
               style={{ fontFamily: "'Dancing Script', cursive" }}
             >
               <p>Carlos Valbuena</p>
               <span className="h-px w-full bg-[#6d0e0d]"></span>
-              <p className="text-xl">Yudy Mar Antolinez</p>
+              <p className="text-xl md:text-5xl">Yudy Mar Antolinez</p>
             </div>
           </div>
 
           {/* Columna Centro */}
           <div className="flex justify-center items-center">
-            <p className="text-roseGold font-serif text-center text-5xl">&</p>
+            <p className="text-roseGold font-serif md:text-8xl text-center text-5xl">&</p>
           </div>
 
           {/* Columna Derecha */}
@@ -48,20 +48,20 @@ function Description() {
             style={{ fontFamily: "'Dancing Script', cursive" }}
           >
             <div className="flex flex-col items-end space-y-1">
-              <p className="text-2xl">Edgar Calderón</p>
+              <p className="text-2xl md:text-6xl">Edgar Calderón</p>
               <span className="h-px w-full bg-[#6d0e0d]"></span>
-              <p className="text-2xl">Nelly García</p>
+              <p className="text-2xl md:text-5xl">Nelly García</p>
             </div>
           </div>
         </div>
 
         {/* Texto inferior */}
-        <p className="text-roseGold font-serif text-center mt-6 px-4 leading-relaxed text-xl max-w-[600px]">
+        <p className="text-roseGold md:text-4xl md:mt-20 font-serif text-center mt-6 px-4 leading-relaxed text-xl max-w-[600px]">
           Tenemos el gusto de invitarlos a la boda de nuestros hijos:
         </p>
       </div>
 
-      <h3 className="mt-6 z-10 text-7xl md:text-5xl text-roseGold font-script">
+      <h3 className="mt-6 z-10 text-7xl md:text-8xl text-roseGold font-script">
         Harley
         <br />&<br />
         Yulieth
@@ -72,21 +72,21 @@ function Description() {
         style={{ fontFamily: "'Playfair Display', serif" }}
       >
         <span
-          className="text-2xl font-medium text-[#c68678] tracking-wider uppercase mb-1"
+          className="text-2xl font-medium text-[#c68678] md:text-4xl tracking-wider uppercase mb-1"
           style={{ fontFamily: "'Playfair Display', serif" }}
         >
           Domingo
         </span>
 
         <span
-          className="text-[6rem] font-bold text-[#c68678] leading-none mb-1"
+          className="text-[6rem] font-bold text-[#c68678] md:text-[9rem] leading-none mb-1"
           style={{ fontFamily: "'Dancing Script', cursive" }}
         >
           23
         </span>
 
         <span
-          className="text-2xl font-medium text-[#c68678] tracking-wider uppercase"
+          className="text-2xl font-medium text-[#c68678] md:text-4xl tracking-wider uppercase"
           style={{ fontFamily: "'Playfair Display', serif" }}
         >
           Marzo
@@ -100,17 +100,17 @@ function Description() {
           textAlign: "center",
         }}
       >
-        <h4 className="font-semibold z-10 text-[#6c201f] tracking-wide text-3xl font-script">
+        <h4 className="font-semibold z-10 md:text-6xl text-[#6c201f] tracking-wide text-3xl font-script">
           Ceremonia
         </h4>
-        <h3 className="font-bold font-serif z-10 text-[#ad4658] px-3 text-3xl mb-2">
+        <h3 className="font-bold font-serif md:text-5xl z-10 text-[#ad4658] px-3 text-3xl mb-2">
           Iglesia Adventista Norte
         </h3>
 
-        <p className="text-[#150103] z-10 text-2xl mb-2 font-serif">
+        <p className="text-[#150103] z-10 md:text-5xl text-2xl mb-2 font-serif">
           Cra. 20 #6-47
         </p>
-        <div className="flex items-center z-10 gap-2 mt-1 text-2xl font-medium">
+        <div className="flex items-center z-10 gap-2 mt-1 text-2xl md:text-3xl font-medium">
           <span className="font-serif text-[#000000]">
             <span className="font-serif text-[#a52d2d]">Hora: </span>3:00 p.m.
           </span>
@@ -119,7 +119,7 @@ function Description() {
         <a
           href="https://www.google.com/maps/place/Iglesia+Adventista+del+s%C3%A9ptimo+d%C3%ADa+-+Norte/@7.1396168,-73.1272981,17z/data=!3m1!4b1!4m6!3m5!1s0x8e6815730bca4eeb:0xa1c501d7f7afe0aa!8m2!3d7.1396168!4d-73.1272981!16s%2Fg%2F11c2j2zd4g?entry=ttu&g_ep=EgoyMDI1MDIyMy4xIKXMDSoASAFQAw%3D%3D"
           target="_blank"
-          className="inline-flex items-center gap-2 text-white bg-[#ad4658] py-3 px-6 rounded-lg mt-3 transition-all duration-300 ease-in-out cursor-pointer border-2 border-[#ad4658] shadow-sm hover:bg-[#ad4658] hover:text-white z-10"
+          className="inline-flex md:text-3xl md: items-center gap-2 text-white bg-[#ad4658] py-3 px-6 rounded-lg mt-3 transition-all duration-300 ease-in-out cursor-pointer border-2 border-[#ad4658] shadow-sm hover:bg-[#ad4658] hover:text-white z-10"
           onMouseOver={(e) => {
             e.currentTarget.style.backgroundColor = "transparent";
             e.currentTarget.style.color = "#ad4658";

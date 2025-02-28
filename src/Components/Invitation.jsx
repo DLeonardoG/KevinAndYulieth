@@ -63,10 +63,10 @@ export const Invitation = () => {
           <WeddingDetails />
           <RSVPForm invitacion={guest} />
           <div className="md:hidden">
-          <Carousel slides={slides} />
+            <Carousel slides={slides} />
           </div>
           <div className="hidden md:flex">
-          <DualCarousel slides={slides} />
+            <DualCarousel slides={slides} />
           </div>
           <img
             src="/under.svg"
