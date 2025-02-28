@@ -262,13 +262,13 @@ const RSVPForm = ({ invitacion }) => {
               </label>
 
               {confirmacion.opcion === "confirmar-parcial" && (
-                <div className="grid grid-cols-2 gap-3 ml-8">
+                <div className="flex flex-col gap-3 ml-8">
                   {invitacion.members.map((persona, index) => (
                     <button
                       key={index}
                       type="button"
                       onClick={() => manejarSeleccion(persona)}
-                      className={`p-2 rounded-full border transition-colors ${
+                      className={`p-2 rounded border transition-colors ${
                         confirmacion.seleccionados.includes(persona)
                           ? "bg-dorado text-white border-dorado"
                           : "bg-white text-gray-700 border-gray-300 hover:border-dorado"
