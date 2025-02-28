@@ -1,3 +1,5 @@
+import {React, useEffect} from 'react';
+
 const WeddingDetails = () => {
     return (
       <div className="min-h-screen bg-[#fd8684] py-12 mt-10 px-4 sm:px-6 lg:px-8">
@@ -65,20 +67,16 @@ const WeddingDetails = () => {
                   <p className="text-sm text-center text-gray-600 mb-4">
                     Agrega el evento a tu calendario.
                   </p>
-                  <a target="_blank" href="https://photos.app.goo.gl/MVfExbkDtKLdKY4Y9" className="inline-flex items-center px-6 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors">
-                  
-                  <svg 
-  className="w-5 h-5 mr-2" 
-  aria-hidden="true" 
-  viewBox="0 0 512 512" 
-  fill="currentColor"
->
-  <path d="M152 0c13.3 0 24 10.7 24 24v24h160V24c0-13.3 10.7-24 24-24s24 10.7 24 24v24h56c26.5 0 48 21.5 48 48v368c0 26.5-21.5 48-48 48H56c-26.5 0-48-21.5-48-48V96c0-26.5 21.5-48 48-48h56V24c0-13.3 10.7-24 24-24zm296 192H64v272c0 8.8 7.2 16 16 16h352c8.8 0 16-7.2 16-16V192z"/>
-</svg>
+                  <a 
+            title="Add to Calendar"
+            className="addeventatc inline-flex items-center gap-2 px-5 py-3 rounded-lg text-white font-medium shadow-md bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 transition-all"
+            data-id="lz25042241"
+            href="https://www.addevent.com/event/lz25042241"
+            target="_blank"
+        >
+            Agrega al calendario
+        </a>
 
-
-                    Agrega al calendario
-                  </a>
                 </div>
           </div>
         </div>
