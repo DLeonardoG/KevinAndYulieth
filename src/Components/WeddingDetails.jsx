@@ -2,7 +2,6 @@ const WeddingDetails = () => {
     return (
       <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Sección Código de Vestuario */}
           <div className="bg-white rounded-lg shadow-lg p-6">
             <div className="text-center mb-6">
               <h2 className="text-2xl font-serif mb-4 text-gray-800 wedding-title">
@@ -28,9 +27,7 @@ const WeddingDetails = () => {
                 Inspírate, click aquí
               </a>
             </div>
-          </div>
-  
-          {/* Sección Regalo */}
+          </div>  
           <div className="bg-white rounded-lg shadow-lg p-6">
             <div className="text-center mb-6">
               <h2 className="text-2xl font-serif mb-4 text-gray-800 wedding-title">
@@ -40,32 +37,19 @@ const WeddingDetails = () => {
                 El mejor regalo es tu presencia y compañía.
               </p>
               <div className="my-6">
-              <img className="w-20 h-20 mx-auto text-gray-500" src="/sobre.svg">
-              
-</img>
+              <img className="w-20 h-20 mx-auto text-gray-500" src="/sobre.svg"></img>
               </div>
               <h3 className="text-lg font-semibold text-gray-800">
                 Lluvia de sobres
               </h3>
             </div>
-          </div>
-  
-          {/* Sección Notas */}
-          <div className="bg-white rounded-lg shadow-lg p-6">
-            <div className="text-center">
-              <h2 className="text-2xl font-serif mb-6 text-gray-800 wedding-title">
-                Notas
-              </h2>
-              <div className="space-y-6">
-                <p className="text-gray-600 leading-relaxed">
-                  Nos encantan los niños pero esta será una fiesta exclusiva para adultos.
-                </p>
-                <div className="pt-4 border-t border-gray-100">
-                  <h3 className="font-semibold mb-2 text-gray-800">Únete al álbum</h3>
-                  <p className="text-sm text-gray-600 mb-4">
+                <div className="pt-4 border-t border-gray-100 flex flex-col justify-center items-center">
+                  <h3 className="font-semibold mb-2 text-gray-800 text-center">Únete al álbum</h3>
+                  <p className="text-sm text-center text-gray-600 mb-4">
                     Acá puedes compartir las fotos de la boda.
                   </p>
-                  <button className="inline-flex items-center px-6 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors">
+                  <a target="_blank" href="https://photos.app.goo.gl/MVfExbkDtKLdKY4Y9" className="inline-flex items-center px-6 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors">
+                  
                     <svg 
                       className="w-5 h-5 mr-2" 
                       aria-hidden="true" 
@@ -74,10 +58,28 @@ const WeddingDetails = () => {
                       <path d="M480 416v16c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V176c0-26.51 21.49-48 48-48h16v208c0 44.112 35.888 80 80 80h336zm96-80V80c0-26.51-21.49-48-48-48H144c-26.51 0-48 21.49-48 48v256c0 26.51 21.49 48 48 48h384c26.51 0 48-21.49 48-48zM256 128c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-96 144l55.515-55.515c4.686-4.686 12.284-4.686 16.971 0L272 256l135.515-135.515c4.686-4.686 12.284-4.686 16.971 0L512 208v112H160v-48z"/>
                     </svg>
                     Comparte aquí
-                  </button>
+                  </a>
                 </div>
-              </div>
-            </div>
+                <div className="pt-4 border-t border-gray-100 flex flex-col justify-center items-center">
+                  <h3 className="font-semibold mb-2 text-gray-800 text-center">Agrega el evento</h3>
+                  <p className="text-sm text-center text-gray-600 mb-4">
+                    Agrega el evento a tu calendario.
+                  </p>
+                  <a target="_blank" href="https://photos.app.goo.gl/MVfExbkDtKLdKY4Y9" className="inline-flex items-center px-6 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors">
+                  
+                  <svg 
+  className="w-5 h-5 mr-2" 
+  aria-hidden="true" 
+  viewBox="0 0 512 512" 
+  fill="currentColor"
+>
+  <path d="M152 0c13.3 0 24 10.7 24 24v24h160V24c0-13.3 10.7-24 24-24s24 10.7 24 24v24h56c26.5 0 48 21.5 48 48v368c0 26.5-21.5 48-48 48H56c-26.5 0-48-21.5-48-48V96c0-26.5 21.5-48 48-48h56V24c0-13.3 10.7-24 24-24zm296 192H64v272c0 8.8 7.2 16 16 16h352c8.8 0 16-7.2 16-16V192z"/>
+</svg>
+
+
+                    Agrega al calendario
+                  </a>
+                </div>
           </div>
         </div>
   

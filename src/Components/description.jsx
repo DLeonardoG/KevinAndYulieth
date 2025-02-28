@@ -122,6 +122,66 @@ function Description() {
           Ubicación
         </a>
       </div>
+      <div
+        className="flex flex-col z-10 items-center p-3 mt-6"
+        style={{
+          fontFamily: "'Playfair Display', serif",
+          textAlign: "center",
+        }}
+      >
+        <h4 className="font-semibold z-10 text-[#6c201f] tracking-wide text-3xl font-script">
+          Recepcion
+        </h4>
+        <h3 className="font-bold font-serif z-10 text-[#ad4658] px-3 text-3xl mb-2">
+          El otro Lugar
+        </h3>
+
+        <p className="text-[#150103] z-10 text-2xl mb-2 font-serif">
+          Cra. 106 #80-47
+        </p>
+        <div className="flex items-center z-10 gap-2 mt-1 text-2xl font-medium">
+          <span className="font-serif text-[#000000]">
+            <span className="font-serif text-[#a52d2d]">Hora: </span>8:00 p.m.
+          </span>
+        </div>
+
+
+        <a
+          href="https://www.google.com/maps/place/Iglesia+Adventista+del+s%C3%A9ptimo+d%C3%ADa+-+Norte/@7.1396168,-73.1272981,17z/data=!3m1!4b1!4m6!3m5!1s0x8e6815730bca4eeb:0xa1c501d7f7afe0aa!8m2!3d7.1396168!4d-73.1272981!16s%2Fg%2F11c2j2zd4g?entry=ttu&g_ep=EgoyMDI1MDIyMy4xIKXMDSoASAFQAw%3D%3D"
+          target="_blank"
+          className="inline-flex items-center gap-2 text-white bg-[#ad4658] py-3 px-6 rounded-lg mt-3 transition-all duration-300 ease-in-out cursor-pointer border-2 border-[#ad4658] shadow-sm hover:bg-[#ad4658] hover:text-white z-10"
+          onMouseOver={(e) => {
+            e.currentTarget.style.backgroundColor = "transparent";
+            e.currentTarget.style.color = "#ad4658";
+          }}
+          onMouseOut={(e) => {
+            e.currentTarget.style.backgroundColor = "#ad4658";
+            e.currentTarget.style.color = "white";
+          }}
+        >
+          <svg
+            stroke="currentColor"
+            fill="none"
+            strokeWidth="1.5"
+            viewBox="0 0 24 24"
+            height="1.2em"
+            width="1.2em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"
+            />
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
+            />
+          </svg>
+          Ubicación
+        </a>
+      </div>
       <img
         src="/flowers.svg"
         alt="Decoración floral inferior"
