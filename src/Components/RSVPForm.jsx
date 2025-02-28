@@ -136,6 +136,9 @@ const RSVPForm = ({ invitacion }) => {
         .bg-dorado {
           background-color: #d4af37;
         }
+        .bg-golden {
+          background-color: #fffaf3;
+        }
         .hover\\:bg-dorado-oscuro:hover {
           background-color: #b5942e;
         }
@@ -219,31 +222,39 @@ const RSVPForm = ({ invitacion }) => {
           <div className="space-y-4">
             <div className="flex flex-col space-y-4">
               {/* Opción 1: Confirmar todos */}
-              <label className="flex flex-col items-center space-x-3">
-                <input
-                  type="radio"
-                  name="opcion"
-                  value="confirmar-todos"
-                  checked={confirmacion.opcion === "confirmar-todos"}
-                  onChange={() => manejarOpcion("confirmar-todos")}
-                  className="form-radio text-dorado"
-                  disabled={loading}
-                />
-                <span className="text-gray-700 font-serif">
-                  Sí, confirmo la asistencia de todos:
-                </span>
-                <ul className="list-none mt-2 space-y-1">
-                  {invitacion.members.map((member, index) => (
-                    <li
-                      key={index}
-                      className="flex items-center gap-2 text-gray-800"
-                    >
-                      <span className="text-dorado">✔️</span>
-                      <span className="capitalize">{member.toLowerCase()}</span>
-                    </li>
-                  ))}
-                </ul>
-              </label>
+              <label
+  className={`flex flex-col items-start gap-2 p-4 rounded-lg cursor-pointer transition-all
+    ${confirmacion.opcion === "confirmar-todos" 
+      ? "border border-dorado bg-golden shadow-sm" 
+      : "border border-gray-300 hover:bg-gray-50"}`}
+>
+  <input
+    type="radio"
+    name="opcion"
+    value="confirmar-todos"
+    checked={confirmacion.opcion === "confirmar-todos"}
+    onChange={() => manejarOpcion("confirmar-todos")}
+    className="hidden"
+    disabled={loading}
+  />
+
+  <span className="text-gray-700 font-serif">
+    Sí, confirmo la asistencia de todos:
+  </span>
+
+  <ul className="list-none mt-1 space-y-1">
+    {invitacion.members.map((member, index) => (
+      <li
+        key={index}
+        className="flex items-center gap-2 text-gray-800"
+      >
+        <span className="text-dorado">✔️</span>
+        <span className="capitalize">{member.toLowerCase()}</span>
+      </li>
+    ))}
+  </ul>
+</label>
+
 
               {/* Opción 2: Confirmación parcial */}
               <label className="flex items-center space-x-3">
