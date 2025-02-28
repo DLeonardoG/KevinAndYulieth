@@ -29,7 +29,7 @@ const TimeUnit = React.memo(({ label, value }) => {
   );
 });
 
-const Countdown = ({ targetDate = '2025-03-28T18:00:00' }) => {
+const Countdown = ({ targetDate = '2025-03-23T15:00:00' }) => {
   const calculateTimeLeft = () => {
     const difference = +new Date(targetDate) - +new Date();
     if (difference > 0) {

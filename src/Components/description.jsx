@@ -15,9 +15,9 @@ function Description() {
         className="absolute top-0 right-0 w-60 z-0 md:w-150 h-auto"
       />
 
-      <h1 className="text-4xl md:text-4xl mt-15 text-vinotinto font-script z-10 mb-4">
+      <h2 className="text-5xl md:text-4xl mt-15 text-vinotinto font-script z-10 mb-4">
         ¡Faltan!
-      </h1>
+      </h2>
 
       <div className="flex justify-center mb-5 z-10">
         <Countdown />
