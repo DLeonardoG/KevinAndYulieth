@@ -8,6 +8,7 @@ import song from "../assets/audio/song.mp3";
 import photo1 from "../assets/img/photo1.jpg";
 import background1 from "/background.svg";
 import Carousel from "./Carousel";
+import DualCarousel from "./Carousel2";
 import Timeline from "./Timeline";
 import WeddingDetails from "./WeddingDetails";
 import RSVPForm from "./RSVPForm";
@@ -41,6 +42,7 @@ export const Invitation = () => {
     "/photo3.jpg",
     "/photo4.jpg",
     "/photo5.jpg",
+    "/photo6.jpg",
   ];
 
   return (
@@ -60,7 +62,12 @@ export const Invitation = () => {
           <Description />
           <WeddingDetails />
           <RSVPForm invitacion={guest} />
+          <div className="md:hidden">
           <Carousel slides={slides} />
+          </div>
+          <div className="hidden md:flex">
+          <DualCarousel slides={slides} />
+          </div>
           <img
             src="/under.svg"
             alt="Flor decorativa"
