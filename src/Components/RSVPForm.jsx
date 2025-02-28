@@ -155,43 +155,23 @@ const RSVPForm = ({ invitacion }) => {
           .flor-decorativa {
             font-size: 2rem;
           }
-          .text-lg {
-            font-size: 1rem;
-          }
-          .text-xl {
-            font-size: 1.25rem;
-          }
-          .text-4xl {
-            font-size: 2.5rem;
-          }
-          .max-w-2xl {
-            max-width: 100%;
-          }
-          .p-8 {
-            padding: 2rem;
-          }
-          .grid-cols-2 {
-            grid-template-columns: 1fr;
-          }
-          .w-40 {
-            width: 50%;
-          }
-          .mb-8 {
-            margin-bottom: 2rem;
-          }
-          .mb-6 {
-            margin-bottom: 1.5rem;
-          }
         }
       `}</style>
 
       {/* Decoración superior */}
       <div className="text-center mb-8">
-        <div className="flor-decorativa mb-4">❀</div>
-        <h1 className="text-4xl font-script text-dorado mb-4">
-          Kevin & Yulieth
-        </h1>
-        <div className="flor-decorativa mt-4">❀</div>
+        {/* <div className="flor-decorativa mb-4">❀</div> */}
+        <img
+          src="/flor_abajito.svg"
+          alt="Flor decorativa"
+          className="mx-auto w-full opacity-90 rotate-180"
+        />
+        <h1 className="text-5xl font-script text-dorado">Kevin & Yulieth</h1>
+        <img
+          src="/flor_abajito.svg"
+          alt="Flor decorativa"
+          className="mx-auto w-full opacity-90"
+        />
       </div>
 
       {/* Mensajes de estado */}
@@ -218,7 +198,7 @@ const RSVPForm = ({ invitacion }) => {
           respetarnos y luchar por la felicidad del otro toda la vida.
         </p>
 
-        <p className="text-xl font-script text-dorado mb-6">
+        <p className="text-3xl font-script text-dorado mb-6">
           Querido(a){" "}
           <span className="font-bold text-gray-800">
             {invitacion.family_name
@@ -236,7 +216,7 @@ const RSVPForm = ({ invitacion }) => {
 
       {/* Formulario RSVP */}
       <div className="bg-white p-8 rounded-lg shadow-inner border border-dorado-claro">
-        <h2 className="text-2xl font-script text-dorado text-center mb-6">
+        <h2 className="text-4xl font-script text-dorado text-center mb-6">
           Confirma tu asistencia
         </h2>
 
@@ -244,7 +224,7 @@ const RSVPForm = ({ invitacion }) => {
           <div className="space-y-4">
             <div className="flex flex-col space-y-4">
               {/* Opción 1: Confirmar todos */}
-              <label className="flex items-center space-x-3">
+              <label className="flex flex-col items-center space-x-3">
                 <input
                   type="radio"
                   name="opcion"
@@ -255,9 +235,19 @@ const RSVPForm = ({ invitacion }) => {
                   disabled={loading}
                 />
                 <span className="text-gray-700 font-serif">
-                  Sí, confirmo la asistencia de todos (
-                  {invitacion.members.join(", ")})
+                  Sí, confirmo la asistencia de todos:
                 </span>
+                <ul className="list-none mt-2 space-y-1">
+                  {invitacion.members.map((member, index) => (
+                    <li
+                      key={index}
+                      className="flex items-center gap-2 text-gray-800"
+                    >
+                      <span className="text-dorado">✔️</span>
+                      <span className="capitalize">{member.toLowerCase()}</span>
+                    </li>
+                  ))}
+                </ul>
               </label>
 
               {/* Opción 2: Confirmación parcial */}
@@ -371,11 +361,11 @@ const RSVPForm = ({ invitacion }) => {
       {/* Decoración inferior */}
       <div className="mt-1 text-center">
         <img
-          src="https://png.pngtree.com/png-clipart/20240528/original/pngtree-the-golden-jasmine-flower-logo-is-a-symbol-of-wealth-vector-png-image_15193892.png"
+          src="/torazon.svg"
           alt="Flor decorativa"
-          className="mx-auto w-20 opacity-90"
+          className="mx-auto w-full opacity-90"
         />
-        <p className="font-script text-dorado text-xl mt-4">
+        <p className="font-script text-dorado text-3xl">
           ¡Esperamos compartir este momento contigo!
         </p>
       </div>

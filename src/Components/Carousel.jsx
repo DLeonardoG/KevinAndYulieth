@@ -22,8 +22,7 @@ const Carousel = ({ slides }) => {
   }, [currentIndex]);
 
   return (
-    <div className="relative w-full h-64 md:h-80 lg:h-96 overflow-hidden group">
-      {/* Slides */}
+    <div className="relative w-full h-64 md:h-80 lg:h-96 overflow-hidden group my-10">
       <div
         className="flex transition-transform duration-500 ease-in-out"
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
