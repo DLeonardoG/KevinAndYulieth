@@ -6,7 +6,7 @@ import Countdown from "./counter.jsx";
 import Description from "./description.jsx";
 import song from "../assets/audio/song.mp3";
 import photo1 from "../assets/img/photo1.jpg";
-import background1 from "../assets/img/background1.svg";
+import background1 from "/background.svg";
 import Carousel from "./Carousel";
 import Timeline from "./Timeline";
 import WeddingDetails from "./WeddingDetails";
