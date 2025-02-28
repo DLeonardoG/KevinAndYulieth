@@ -48,7 +48,7 @@ const WeddingDetails = () => {
                   <p className="text-sm text-center text-gray-600 mb-4">
                     Acá puedes compartir las fotos de la boda.
                   </p>
-                  <a target="_blank" href="https://photos.app.goo.gl/MVfExbkDtKLdKY4Y9" className="inline-flex items-center px-6 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors">
+                  <a target="_blank" href="https://photos.app.goo.gl/k4oaFbNhYcWuv1bW6" className="inline-flex items-center px-6 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors">
                   
                     <svg 
                       className="w-5 h-5 mr-2" 
