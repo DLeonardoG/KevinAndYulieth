@@ -41,7 +41,6 @@ const Carousel = ({ slides }) => {
         ))}
       </div>
 
-      {/* Navigation buttons */}
       <button
         onClick={prevSlide}
         className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/30 p-2 rounded-full hover:bg-white/50 transition-colors duration-300 

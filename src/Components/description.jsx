@@ -15,7 +15,7 @@ function Description() {
         className="absolute top-0 right-0 w-60 z-0 md:w-150 h-auto"
       />
 
-      <h2 className="text-5xl md:text-4xl mt-15 text-vinotinto font-script z-10 mb-4">
+      <h2 className="text-5xl md:text-4xl mt-17 text-vinotinto font-script z-10 mb-4">
         ¡Faltan!
       </h2>
 
@@ -24,7 +24,7 @@ function Description() {
       </div>
 
       <div className="flex flex-col items-center justify-center py-8 px-2">
-        <div className="w-full max-w-[600px] grid grid-cols-3 gap-4 items-center">
+        <div className="w-full max-w-[600px] grid grid-cols-3 gap-3 items-center">
           {/* Columna Izquierda */}
           <div className="text-roseGold text-left leading-relaxed space-y-2">
             <div
@@ -32,7 +32,7 @@ function Description() {
               style={{ fontFamily: "'Dancing Script', cursive" }}
             >
               <p>Carlos Valbuena</p>
-              <span className="h-px w-full bg-black"></span>
+              <span className="h-px w-full bg-[#6d0e0d]"></span>
               <p className="text-xl">Yudy Mar Antolinez</p>
             </div>
           </div>
@@ -49,7 +49,7 @@ function Description() {
           >
             <div className="flex flex-col items-end space-y-1">
               <p className="text-2xl">Edgar Calderón</p>
-              <span className="h-px w-full bg-black"></span>
+              <span className="h-px w-full bg-[#6d0e0d]"></span>
               <p className="text-2xl">Nelly García</p>
             </div>
           </div>
