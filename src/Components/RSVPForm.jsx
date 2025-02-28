@@ -213,7 +213,7 @@ const RSVPForm = ({ invitacion }) => {
       </div>
 
       {/* Formulario RSVP */}
-      <div className="bg-white p-8 rounded-lg shadow-inner border border-dorado-claro">
+      <div className="bg-white py-8 px-4 rounded-lg shadow-inner border border-dorado-claro">
         <h2 className="text-4xl font-script text-dorado text-center mb-6">
           Confirma tu asistencia
         </h2>
@@ -248,7 +248,7 @@ const RSVPForm = ({ invitacion }) => {
         key={index}
         className="flex items-center gap-2 text-gray-800"
       >
-        <span className="text-dorado">✔️</span>
+        <span className="text-dorado">💛</span>
         <span className="capitalize">{member.toLowerCase()}</span>
       </li>
     ))}
