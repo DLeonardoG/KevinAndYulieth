@@ -1,6 +1,6 @@
 const WeddingFooter = () => {
   return (
-    <footer className="w-full bg-pink-100 py-6 flex flex-col items-center text-center" style={styles.footer}>
+    <footer className="w-full mt-0 bg-pink-100 py-6 flex flex-col items-center text-center" style={styles.footer}>
       <div style={styles.names}>Harley & Yulieth</div>
       <div style={styles.date}>❤️ 23 • 03 • 2025 ❤️</div>
     </footer>
