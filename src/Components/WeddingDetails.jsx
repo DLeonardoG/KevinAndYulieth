@@ -14,7 +14,7 @@ const WeddingDetails = () => {
               />
               <p className="font-semibold mb-2 text-gray-700">Traje de Cóctel</p>
               <p className="text-sm text-gray-600 mb-4 leading-relaxed">
-                Reservamos el color blanco en mujeres para uso exclusivo de la novia.
+                Reservamos el color blanco y vinotinto en mujeres para uso exclusivo de la novia.
                 <br />
                 Hombres sin restricción.
               </p>

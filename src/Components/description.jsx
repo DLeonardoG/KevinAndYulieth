@@ -27,13 +27,12 @@ function Description() {
         className="text-roseGold z-10 font-serif leading-relaxed text-center px-4 py-2 max-w-[600px] mx-auto tracking-wide"
         style={{ lineHeight: "1.85rem" }}
       >
-        Con inmenso amor e ilusión, <br />
-        y en compañía de nuestros padres <br />
-        tenemos el gusto de invitar a celebrar{" "}
+        Carlos Valbuena <br/> Yudy Mar Antolinez <br/> & <br/>Edgar Calderón <br/>Nelly García<br/>
+        Tenemos el gusto de invitarlos a la boda de nuestros hijos:
       </p>
 
       <h2 className="mt-6 z-10 text-5xl md:text-5xl text-roseGold font-script">
-        Nuestra Boda
+        Harley<br/>&<br/>Yulieth
       </h2>
 
       <div
@@ -44,14 +43,14 @@ function Description() {
           className="text-lg font-medium text-[#c68678] tracking-wider uppercase mb-1"
           style={{ fontFamily: "'Playfair Display', serif" }}
         >
-          Viernes
+          Domingo
         </span>
 
         <span
           className="text-[4rem] font-bold text-[#c68678] leading-none mb-1"
           style={{ fontFamily: "'Dancing Script', cursive" }}
         >
-          28
+          23
         </span>
 
         <span
@@ -81,10 +80,9 @@ function Description() {
         </p>
         <div className="flex items-center z-10 gap-2 mt-1 text-2xl font-medium">
           <span className="font-serif text-[#000000]">
-            <span className="font-serif text-[#a52d2d]">Hora: </span>6:00 p.m.
+            <span className="font-serif text-[#a52d2d]">Hora: </span>3:00 p.m.
           </span>
         </div>
-
 
         <a
           href="https://www.google.com/maps/place/Iglesia+Adventista+del+s%C3%A9ptimo+d%C3%ADa+-+Norte/@7.1396168,-73.1272981,17z/data=!3m1!4b1!4m6!3m5!1s0x8e6815730bca4eeb:0xa1c501d7f7afe0aa!8m2!3d7.1396168!4d-73.1272981!16s%2Fg%2F11c2j2zd4g?entry=ttu&g_ep=EgoyMDI1MDIyMy4xIKXMDSoASAFQAw%3D%3D"
@@ -133,21 +131,21 @@ function Description() {
           Recepcion
         </h4>
         <h3 className="font-bold font-serif z-10 text-[#ad4658] px-3 text-3xl mb-2">
-          El otro Lugar
+          Festejos Rojas
         </h3>
 
         <p className="text-[#150103] z-10 text-2xl mb-2 font-serif">
-          Cra. 106 #80-47
+        Avenida Eduardo Santos #28-49
+
         </p>
         <div className="flex items-center z-10 gap-2 mt-1 text-2xl font-medium">
           <span className="font-serif text-[#000000]">
-            <span className="font-serif text-[#a52d2d]">Hora: </span>8:00 p.m.
+            <span className="font-serif text-[#a52d2d]">Hora: </span>6:00 p.m.
           </span>
         </div>
 
-
         <a
-          href="https://www.google.com/maps/place/Iglesia+Adventista+del+s%C3%A9ptimo+d%C3%ADa+-+Norte/@7.1396168,-73.1272981,17z/data=!3m1!4b1!4m6!3m5!1s0x8e6815730bca4eeb:0xa1c501d7f7afe0aa!8m2!3d7.1396168!4d-73.1272981!16s%2Fg%2F11c2j2zd4g?entry=ttu&g_ep=EgoyMDI1MDIyMy4xIKXMDSoASAFQAw%3D%3D"
+          href="https://www.google.com/maps/place/Ave+Eduardo+Santos+%2328-49,+Bucaramanga,+Santander/@7.1338617,-73.1188956,17z/data=!3m1!4b1!4m6!3m5!1s0x8e68156f1fb5f8c9:0x923acea376168ec8!8m2!3d7.1338617!4d-73.1188956!16s%2Fg%2F11h59rfnxr?entry=ttu&g_ep=EgoyMDI1MDIyNS4wIKXMDSoASAFQAw%3D%3D"
           target="_blank"
           className="inline-flex items-center gap-2 text-white bg-[#ad4658] py-3 px-6 rounded-lg mt-3 transition-all duration-300 ease-in-out cursor-pointer border-2 border-[#ad4658] shadow-sm hover:bg-[#ad4658] hover:text-white z-10"
           onMouseOver={(e) => {

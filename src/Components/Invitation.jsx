@@ -58,7 +58,6 @@ export const Invitation = () => {
           ></div>
           <MusicPlayer audioSrc={song} backgroundImage={photo1} />
           <Description />
-            <Timeline />
             <WeddingDetails />
             <RSVPForm invitacion={guest} />
             <Carousel slides={slides} />
