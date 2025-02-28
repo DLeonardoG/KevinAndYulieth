@@ -166,7 +166,7 @@ const RSVPForm = ({ invitacion }) => {
           alt="Flor decorativa"
           className="mx-auto w-full opacity-90 rotate-180"
         />
-        <h1 className="text-5xl font-script text-dorado">Kevin & Yulieth</h1>
+        <h2 className="text-5xl font-script text-dorado">Harley & Yulieth</h2>
         <img
           src="/flor_abajito.svg"
           alt="Flor decorativa"
@@ -198,19 +198,14 @@ const RSVPForm = ({ invitacion }) => {
           respetarnos y luchar por la felicidad del otro toda la vida.
         </p>
 
-        <p className="text-3xl font-script text-dorado mb-6">
-          Querido(a){" "}
-          <span className="font-bold text-gray-800">
+          <p className="font-bold text-dorado text-4xl md:text-6xl font-script text-dorado mb-6 text-gray-800">
             {invitacion.family_name
               .toLowerCase()
               .replace(/\b\w/g, (char) => char.toUpperCase())}
-          </span>
-        </p>
+          </p>
 
         <p className="text-lg font-serif text-gray-700 mb-8">
-          Por eso queremos que tú hagas parte de nuestro gran día, queremos que
-          te goces y disfrutes de nuestro sueño hecho realidad, el de formar un
-          hogar con la bendición de nuestro Padre Celestial.
+          Queremos que hagan parte de nuestro gran día, que gocen y disfruten de nuestro sueño hecho realidad, el de formar un hogar con la bendición de nuestro Padre Celestial.
         </p>
       </div>
 

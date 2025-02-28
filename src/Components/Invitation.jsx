@@ -61,6 +61,11 @@ export const Invitation = () => {
             <WeddingDetails />
             <RSVPForm invitacion={guest} />
             <Carousel slides={slides} />
+            <img
+          src="/under.svg"
+          alt="Flor decorativa"
+          className="mx-auto w-full opacity-90"
+        />
           <WeddingFooter />
         </>
       )}

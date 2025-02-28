@@ -128,7 +128,7 @@ function Description() {
         }}
       >
         <h4 className="font-semibold z-10 text-[#6c201f] tracking-wide text-3xl font-script">
-          Recepcion
+          Recepción
         </h4>
         <h3 className="font-bold font-serif z-10 text-[#ad4658] px-3 text-3xl mb-2">
           Festejos Rojas
