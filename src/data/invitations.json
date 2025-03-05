@@ -343,5 +343,12 @@
       "family_name": "ARNULFO MANTILLA Y SRA.",
       "total_members": 1,
       "members": ["ARNULFO MANTILLA", "ELISABETH DIAZ"]
+    },
+    {
+      "id": 47,
+      "id_web": "cristiancamilo",
+      "family_name": "CRISTIAN CAMILO RUIZ CALDERON",
+      "total_members": 1,
+      "members": ["CRISTIAN CAMILO RUIZ CALDERON"]
     }
   ]
