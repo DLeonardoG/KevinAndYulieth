@@ -350,5 +350,47 @@
       "family_name": "CRISTIAN CAMILO RUIZ CALDERON",
       "total_members": 1,
       "members": ["CRISTIAN CAMILO RUIZ CALDERON"]
-    }
+    },
+    {
+      "id": 48,
+      "id_web": "efrainr",
+      "family_name": "EFRAIN RUEDA Y SRA",
+      "total_members": 2,
+      "members": ["EFRAIN RUEDA","KARINA LIZCANO"]
+    },
+    {
+      "id": 49,
+      "id_web": "rubenv",
+      "family_name": "RUBEN VILLAMIZAR, SRA E HIJA",
+      "total_members": 3,
+      "members": ["RUBEN VILLAMIZAR","WENDY VALBUENA","TALIANA"]
+    },
+    {
+      "id": 50,
+      "id_web": "albertod",
+      "family_name": "ALBERTO DIAZ",
+      "total_members": 1,
+      "members": ["ALBERTO DIAZ"]
+    },
+    {
+      "id": 51,
+      "id_web": "juanse",
+      "family_name": "JUAN SEBASTIAN VILLAMIZAR",
+      "total_members": 1,
+      "members": ["JUAN SEBASTIAN VILLAMIZAR"]
+    },
+    {
+      "id": 52,
+      "id_web": "epimeniap",
+      "family_name": "EPIMENIA PEREZ",
+      "total_members": 1,
+      "members": ["EPIMENIA PEREZ"]
+    },
+    {
+      "id": 53,
+      "id_web": "gabrielav",
+      "family_name": "GABRIELA VILLAMIZAR E HIJA",
+      "total_members": 2,
+      "members": ["GABRIELA VILLAMIZAR","ANTONELLA"]
+    },
   ]
