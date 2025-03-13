@@ -392,5 +392,40 @@
       "family_name": "GABRIELA VILLAMIZAR E HIJA",
       "total_members": 2,
       "members": ["GABRIELA VILLAMIZAR","ANTONELLA"]
+    },
+    {
+      "id": 54,
+      "id_web": "luiseduardo",
+      "family_name": "LUIS EDUARDO VALBUENA Y SRA.",
+      "total_members": 2,
+      "members": ["LUIS EDUARDO VALBUENA","ANA JOAQUINA MEDINA"]
+    },
+    {
+      "id": 55,
+      "id_web": "jonathanv",
+      "family_name": "JONATHAN VILLAMIZAR GUTIERREZ",
+      "total_members": 1,
+      "members": ["JONATHAN VILLAMIZAR GUTIERREZ"]
+    },
+    {
+      "id": 56,
+      "id_web": "brayanm",
+      "family_name": "BRAYAN MANTILLA",
+      "total_members": 1,
+      "members": ["BRAYAN MANTILLA"]
+    },
+    {
+      "id": 57,
+      "id_web": "ederm",
+      "family_name": "EDER MANTILLA",
+      "total_members": 3,
+      "members": ["EDER MANTILLA","ISABELLA NIÑO","ANTONELLA"]
+    },
+    {
+      "id": 58,
+      "id_web": "benjamind",
+      "family_name": "BENJAMIN DIAZ Y SRA.",
+      "total_members": 2,
+      "members": ["BENJAMIN DIAZ","AMPARO"]
     }
   ]
